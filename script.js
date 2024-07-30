@@ -1,10 +1,5 @@
-// TODO add more title screens
-// TODO minimize title screens file size
-
-// VARIABLES
 const imageCount = 215;
 
-// ELEMENTS
 const image = document.getElementById('image');
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
@@ -12,7 +7,6 @@ const randomButton = document.getElementById('randomButton');
 const imageIndex = document.getElementById('imageIndex');
 const imageTotal = document.getElementById('imageTotal');
 
-// MOUNT
 let currentIndex = parseInt(getQueryParam('episode')) || getRandom();
 if (currentIndex < 1 || currentIndex > imageCount) {
     currentIndex = getRandom();
@@ -20,7 +14,6 @@ if (currentIndex < 1 || currentIndex > imageCount) {
 showImage(currentIndex, false);
 imageTotal.textContent = ` / ${imageCount}`;
 
-// METHODS
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -56,7 +49,6 @@ function getRandom() {
 	return Math.floor(Math.random() * imageCount) + 1;
 }
 
-// BINDINGS
 prevButton.addEventListener('click', () => {
     if (currentIndex > 1) {
         currentIndex--;
