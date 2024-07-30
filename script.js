@@ -32,7 +32,7 @@ function showImage(index, updateQuery = true) {
 	updateButtonState(index);
 	
 	if(updateQuery) {
-		setQueryParam('episode', index);
+		// setQueryParam('episode', index);
 	}
 }
 
