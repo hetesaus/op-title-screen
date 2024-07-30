@@ -68,35 +68,16 @@ nextButton.addEventListener('click', () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {   
-	var img = document.getElementById('image');
- 
-	if(img) {
-		img.addEventListener('click', function() {
-			// Request fullscreen mode for the image based on the browser's compatibility
-			if (img.requestFullscreen) {
-				img.requestFullscreen();
-			} else if (img.mozRequestFullScreen) { // Firefox
-				img.mozRequestFullScreen();
-			} else if (img.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-				img.webkitRequestFullscreen();
-			} else if (img.msRequestFullscreen) { // IE/Edge
-				img.msRequestFullscreen();
-			}
-		});
-	}
-
-	document.addEventListener('keydown', (event) => {
-		if (event.key === 'ArrowLeft') {
-			if (currentIndex > 1) {
-				currentIndex--;
-				showImage(currentIndex);
-			}
-		} else if (event.key === 'ArrowRight') {
-			if (currentIndex < imageCount) {
-				currentIndex++;
-				showImage(currentIndex);
-			}
+document.addEventListener('keydown', (event) => {
+	if (event.key === 'ArrowLeft') {
+		if (currentIndex > 1) {
+			currentIndex--;
+			showImage(currentIndex);
 		}
-    });
+	} else if (event.key === 'ArrowRight') {
+		if (currentIndex < imageCount) {
+			currentIndex++;
+			showImage(currentIndex);
+		}
+	}
 });
