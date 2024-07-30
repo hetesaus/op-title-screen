@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece titles</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div>
+        <div class="Image__Container">
+            <img id="image" class="Image" src="">
+        </div>
+		
+		<span>episode: </span>
+		<span id="imageIndex" class="Text__Index">1</span>
+		<span id="imageTotal" class="Text__Info">9999</span>
+		<i class="Text__Info Tooltip fas fa-info-circle">
+			<span class="Tooltip__Text">
+				Amount of uploaded titles
+			</span>
+		</i>
+		
+		<div class="Image__Controls">
+            <button id="prevButton" class="Button">
+				<i class="fas fa-arrow-left"></i> Prev
+			</button>
+			<button id="randomButton" class="Button">
+				Random <i class="fas fa-random"></i>
+			</button>
+            <button id="nextButton" class="Button">
+				Next <i class="fas fa-arrow-right"></i>
+			</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
