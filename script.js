@@ -68,7 +68,24 @@ nextButton.addEventListener('click', () => {
     }
 });
 
-document.addEventListener('keydown', (event) => {
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // const openDialogBtn = document.getElementById('openDialogBtn');
+    // const dialogOverlay = document.getElementById('dialogOverlay');
+    // const dialogBox = document.getElementById('dialogBox');
+
+    // openDialogBtn.addEventListener('click', function() {
+        // dialogOverlay.classList.remove('hidden');
+    // });
+
+    // dialogOverlay.addEventListener('click', function(event) {
+        // if (event.target === dialogOverlay) {
+            // dialogOverlay.classList.add('hidden');
+        // }
+    // });
+	
+	document.addEventListener('keydown', (event) => {
 	if (event.key === 'ArrowLeft') {
 		if (currentIndex > 1) {
 			currentIndex--;
@@ -80,4 +97,5 @@ document.addEventListener('keydown', (event) => {
 			showImage(currentIndex);
 		}
 	}
+});
 });
