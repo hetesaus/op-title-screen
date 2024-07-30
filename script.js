@@ -81,3 +81,19 @@ document.addEventListener('keydown', (event) => {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const openDialogBtn = document.getElementById('openDialogBtn');
+    const dialogOverlay = document.getElementById('dialogOverlay');
+    const dialogBox = document.getElementById('dialogBox');
+
+    openDialogBtn.addEventListener('click', function() {
+        dialogOverlay.classList.remove('hidden');
+    });
+
+    dialogOverlay.addEventListener('click', function(event) {
+        if (event.target === dialogOverlay) {
+            dialogOverlay.classList.add('hidden');
+        }
+    });
+});
